@@ -3,15 +3,15 @@ import { galleryItems } from './gallery-items.js';
 
 const galleryContainer = document.querySelector('.gallery');
 const galleryList = createGalleryList(galleryItems);
-galleryContainer.insertAdjacentHTML('afterbegin', galleryList);
 
+galleryContainer.insertAdjacentHTML('afterbegin', galleryList);
 galleryContainer.addEventListener('click', clickOnImage)
 
 function createGalleryList(galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
-        return `<div class="gallery__item">
-            <a a class="gallery__link" href = "${original}" >
-                <img
+       return  `<div class="gallery__item">
+                <a class="gallery__link" href = "${original}" >
+                <img 
                     class="gallery__image"
                     src='${preview}'
                     data-source="${original}"
@@ -25,6 +25,6 @@ function createGalleryList(galleryItems) {
 function clickOnImage(e) {
     e.preventDefault();
     const instance = basicLightbox.create(`
-    <img src="${e.target.dataset.sourse}" width="800" height="600">`);
+    <img src="${e.target.dataset.source}" width="800" height="600">`);
     instance.show();
 };
