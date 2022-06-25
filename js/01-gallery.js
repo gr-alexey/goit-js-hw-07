@@ -20,8 +20,6 @@ function createGalleryList(galleryItems) {
                 />
             </a>`).join('')};
 
-console.log(galleryContainer);
-
 function clickOnImage(e) {
     e.preventDefault();
     const instance = basicLightbox.create(`
