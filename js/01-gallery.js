@@ -26,4 +26,3 @@ function clickOnImage(e) {
     <img src="${e.target.dataset.source}" width="800" height="600">`);
     instance.show();
 };
-
